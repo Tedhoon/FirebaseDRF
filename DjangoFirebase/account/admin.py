@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import FirebaseUserManager,FirebaseUser
 
-# Register your models here.
+admin.site.register(FirebaseUser)
+
+# firebase에서 db_table을 짜야함

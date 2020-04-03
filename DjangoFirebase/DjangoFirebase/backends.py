@@ -18,4 +18,5 @@ class FirebaseBackend:
 
 # python manage.py shell
 # >> from DjangoFirebase.backends import *
-# >> FirebaseBackend.authenticate()
+# >> Users = FirebaseBackend()
+# >> Users.authenticate(email = "gt0305@likelion.org", nickname = "me", password = "1")
