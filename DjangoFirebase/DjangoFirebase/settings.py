@@ -120,10 +120,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 # firebase
 
-# import firebase_admin
-# from firebase_admin import credentials
+import firebase_admin
+from firebase_admin import credentials
 
-# cred = credentials.Certificate(os.path.join(BASE_DIR, 'credentials.json'))
-# default_app = firebase_admin.initialize_app(cred)
+cred = credentials.Certificate(os.path.join(BASE_DIR, 'credentials.json'))
+default_app = firebase_admin.initialize_app(cred)
