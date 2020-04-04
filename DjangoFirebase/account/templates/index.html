@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form action="{% url 'signin' %}" method="post">
+        {% csrf_token %}
+        Email : 
+        <input type="email" name="email">
+        Password :
+        <input type="password" name="password">
+    </form>
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB0noCCCErBRiQGrK8o0NrDVN9GSRjVOXQ",
+            authDomain: "fir-djangouser.firebaseapp.com",
+            databaseURL: "https://fir-djangouser.firebaseio.com",
+            projectId: "fir-djangouser",
+            storageBucket: "fir-djangouser.appspot.com",
+            messagingSenderId: "227062425443",
+            appId: "1:227062425443:web:23ccd4e33d1560d33d9556"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+</body>
+</html>
