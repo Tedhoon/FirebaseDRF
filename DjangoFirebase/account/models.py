@@ -42,6 +42,8 @@ class FirebaseUser(AbstractBaseUser):
         max_length=100,
         verbose_name='유저 UID (Firebase 에서 자동 생성)'
     )
+    email = models.EmailField('이메일', unique=True)
+    password = models.CharField('비밀번호', max_length=128)
     last_login = models.DateTimeField(auto_now=True, verbose_name='최근 로그인 일자')
     is_active = models.BooleanField(default=True, verbose_name='활성화 여부')
     is_admin = models.BooleanField(default=False, verbose_name='관리자 여부')
